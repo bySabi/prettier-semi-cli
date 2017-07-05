@@ -1,0 +1,46 @@
+{
+  "name": "prettier-semi-cli",
+  "version": "1.0.0",
+  "description": "Standalone CLI for prettier -> semistandard --fix -> Formatted Code",
+  "keywords": [
+    "prettier",
+    "eslint",
+    "prettier-eslint",
+    "linter",
+    "standard",
+    "standard-engine",
+    "semistandard",
+    "cli"
+  ],
+  "bin": {
+    "prettier-semi": "src/index.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "semistandard --verbose | snazzy",
+    "test": "npm run lint",
+    "format": "node ./src/index.js --write '**/*.js'"
+  },
+  "dependencies": {
+    "prettier-eslint-cli": "4.x.x",
+    "semistandard": "*",
+    "semistandard-prettier-eslint": "*",
+    "loglevel-colored-level-prefix": "1.x.x"
+  },
+  "devDependencies": {
+    "snazzy": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bySabi/prettier-semi-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bySabi/prettier-semi-cli/issues"
+  },
+  "homepage": "https://github.com/bySabi/prettier-semi-cli#readme",
+  "author": "bySabi Files",
+  "license": "MIT"
+}
+
